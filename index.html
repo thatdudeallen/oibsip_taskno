@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KwaMai Mutsa Website Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="Images/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#"><b>Home</b></a></li>
+                <li><a href="#"><b>Menu</b></a></li>
+                <li><a href="#"><b>About Us</b></a></li>
+                <li><a href="#"><b>Contact</b></a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>A culinary journey through authentic <span>African Food</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quod labore earum illo veniam aliquam dignissimos praesentium asperiores quis magni recusandae distinctio, tenetur eveniet saepe quasi maiores. Explicabo, similique aperiam.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="Images/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="Images/thumb1.png" onclick="imgSlider('Images/img1.png');changeCircleColor('#ff6600')"></li>
+            <li><img src="Images/thumb2.png" onclick="imgSlider('Images/img2.png');changeCircleColor('#3d3d3d')"></li>
+            <li><img src="Images/thumb3.png" onclick="imgSlider('Images/img3.png');changeCircleColor('#000000')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="Images/facebook.png"></a></li>
+            <li><a href="#"><img src="Images/twitter.png"></a></li>
+            <li><a href="#"><img src="Images/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
